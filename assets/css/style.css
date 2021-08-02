@@ -1,0 +1,75 @@
+/* Grid und  Hover-Effekt. */
+/* Für den Hover-Effekt kannst Du z.B. Position “relative” und “absolute” mit transition benutzen. */
+* {
+  margin: 0;
+  padding: 0;
+}
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-gap: 2px 5px;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+section article img:first-child {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+section article img:nth-child(2) {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+section article img:nth-child(3) {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+section article img:nth-child(4) {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+section article img:nth-child(5) {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+section article img:nth-child(6) {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+section article img:nth-child(7) {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+section article img:nth-child(8) {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+section article img:nth-child(9) {
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+section article {
+  position: relative;
+  overflow: hidden;
+}
+section article div {
+  position: absolute;
+  width: 100%;
+  height: 10vh;
+  bottom: -80%;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  padding-top: 35%;
+  /* transition-property: width; */
+  transition-duration: 3s;
+  transition-delay: 0.1s;
+}
+section article div:hover {
+  position: absolute;
+  /* width: 100%; */
+  top: 0;
+  left: 0;
+  transition-timing-function: linear;
+}
